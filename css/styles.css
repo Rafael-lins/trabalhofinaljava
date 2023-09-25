@@ -7947,7 +7947,8 @@ textarea.form-control-lg {
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: bolder;
+  color white;
 }
 
 .lh-1 {
