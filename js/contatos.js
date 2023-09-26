@@ -1,15 +1,51 @@
-// Captura o nome do usuário por meio de um prompt
-var nome = prompt("Digite seu nome:");
 
-// Captura o e-mail do usuário por meio de um prompt
-var email = prompt("Digite o seu e-mail:");
-// Captura o telefone do usuário por meio de um prompt
-var telefone = prompt("Digite o seu telefone:");
-// Captura a mensagem  do usuário por meio de um prompt
-var mensagem = prompt("Digite a sua mensagem:");
 
-// Exibe os dados capturados por meio de console.log
-console.log("nome: " + nome);
-console.log("email: " + email);
-console.log("telefone: " + telefone);
-console.log("mensagem: " + mensagem);
+// Inicializando com um array vazio para armazenar registros do formulário de contatos
+const formRecords = [];
+
+function displayPromptAndLog(inputId) {
+    const inputValue = document.getElementById(inputId).value;
+    if (inputValue) {
+        // Registrar o valor de entrada
+        console.log(`Input (${inputId}): ${inputValue}`);
+        
+        // Salvar o registro do formulário no array
+        formRecords.push({ inputId, value: inputValue });
+    } else {
+        console.log(`Input (${inputId}) is empty.`);
+    }
+}
+
+// Função para limpar campos do formulário
+function clearFormFields() {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+}
+
+// Função para enviar o formulário
+function submitForm() {
+    // Chame displayPromptAndLog para cada campo de entrada
+    displayPromptAndLog('name');
+    displayPromptAndLog('email');
+    displayPromptAndLog('phone');
+    displayPromptAndLog('message');
+    
+    // Limpe os campos do formulário
+    clearFormFields();
+    
+    // Exibir todos os registros do formulário
+    displayFormRecords();
+
+    // Habilite o botão "SEND MESSAGE" novamente
+    document.getElementById('submitButton').disabled = false;
+}
+
+// Função para exibir todos os registros do formulário
+function displayFormRecords() {
+    console.log("Form Records:");
+    for (const record of formRecords) {
+        console.log(`Input (${record.inputId}): ${record.value}`);
+    }
+}
