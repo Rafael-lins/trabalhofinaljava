@@ -11298,3 +11298,69 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+
+
+.page-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.section-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.section-subheading {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+#orçamento {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#conteudo-left{
+  /*largura da div*/
+  width:50%;
+  /* altura da div */
+  height:15px;
+  float:left;
+  }
+#conteudo-right{
+  /*largura da div*/
+  width:50%;
+  /* altura da div */
+  height:150px;
+  float:left;
+  }
